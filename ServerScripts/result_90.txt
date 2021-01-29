@@ -1,0 +1,23 @@
+httperf --hog --timeout=1e+06 --client=0/1 --server=10.130.153.21 --port=8080 --uri=/script.php --rate=90 --send-buffer=4096 --recv-buffer=16384 --ssl-protocol=auto --num-conns=27000 --num-calls=1
+Maximum connect burst length: 1
+
+Total: connections 27000 requests 25543 replies 24490 test-duration 367.772 s
+
+Connection rate: 73.4 conn/s (13.6 ms/conn, <=2560 concurrent connections)
+Connection time [ms]: min 51.9 avg 10311.8 max 140263.1 median 6790.5 stddev 12301.0
+Connection time [ms]: connect 10280.3
+Connection length [replies/conn]: 1.000
+
+Request rate: 69.5 req/s (14.4 ms/req)
+Request size [B]: 76.0
+
+Reply rate [replies/s]: min 0.0 avg 67.1 max 87.4 stddev 24.4 (73 samples)
+Reply time [ms]: response 5168.1 transfer 2237.1
+Reply size [B]: header 138.0 content 47.0 footer 1.0 (total 186.0)
+Reply status: 1xx=0 2xx=24490 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 363.14 system 4.58 (user 98.7% system 1.2% total 100.0%)
+Net I/O: 17.3 KB/s (0.1*10^6 bps)
+
+Errors: total 2510 client-timo 0 socket-timo 1457 connrefused 0 connreset 1053
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
